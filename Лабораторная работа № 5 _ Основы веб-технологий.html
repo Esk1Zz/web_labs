@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex">
+	<title>Лабораторная работа № 5 | Основы веб-технологий</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+	<link href="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%205%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/css2.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%205%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/task.css">
+</head>
+
+<body>
+
+	<header class="header">
+		<h1 class="header__title">Лабораторная работа 5</h1>
+		<hr>
+	</header>
+
+	<main class="task">
+		<p class="task__short">
+			Добавьте новые блюда и категории. Создайте фильтры для каждой категории.
+		</p>
+
+		<div class="task__full">
+			<h2 class="task__full_title">
+				Порядок выполнения
+			</h2>
+
+			<p class="task__full_text" id="mockup_form">
+				Примерные макеты разделов:
+			</p>
+
+			<div class="task__gallery">
+				<section class="task__gallery_item">
+					<a href="https://mospolytech-web-course.netlify.app/images/5/mockup1.png" target="_blank">
+						<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%205%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup1.png" alt="" class="task__full_img">
+					</a>
+					<p>
+						Раздел "Выберите суп"
+					</p>
+				</section>
+				<section class="task__gallery_item">
+					<a href="https://mospolytech-web-course.netlify.app/images/5/mockup2.png" target="_blank">
+						<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%205%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup2.png" alt="" class="task__full_img">
+					</a>
+					<p>
+						Раздел "Выберите главное блюдо"
+					</p>
+				</section>
+				<section class="task__gallery_item">
+					<a href="https://mospolytech-web-course.netlify.app/images/5/mockup3.png" target="_blank">
+						<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%205%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup3.png" alt="" class="task__full_img">
+					</a>
+					<p>
+						Раздел "Выберите салат или стартер"
+					</p>
+				</section>
+				<section class="task__gallery_item">
+					<a href="https://mospolytech-web-course.netlify.app/images/5/mockup4.png" target="_blank">
+						<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%205%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup4.png" alt="" class="task__full_img">
+					</a>
+					<p>
+						Раздел "Выберите напиток"
+					</p>
+				</section>
+				<section class="task__gallery_item">
+					<a href="https://mospolytech-web-course.netlify.app/images/5/mockup5.png" target="_blank">
+						<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%205%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup5.png" alt="" class="task__full_img">
+					</a>
+					<p>
+						Раздел "Выберите десерт"
+					</p>
+				</section>
+				<section class="task__gallery_item">
+					<a href="https://mospolytech-web-course.netlify.app/images/5/mockup6.png" target="_blank">
+						<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%205%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup6.png" alt="" class="task__full_img">
+					</a>
+					<p>
+						Раздел "Сделать заказ"
+					</p>
+				</section>
+
+			</div>
+
+			<p class="task__full_text">
+				<a href="https://mospolytech-web-course.netlify.app/images/5/mockupfull.png" target="_blank">Полный макет
+				</a> страницы:
+			</p>
+
+			<p class="task__full_box_text">
+				1. Для каждой категории блюд добавьте блок с фильтрами (фильтры - это кнопки).
+			</p>
+
+			<p class="task__full_box_text">
+				Фильтры для категорий:
+			</p>
+
+			<table class="task__full_box_table table_type_one">
+				<tbody><tr>
+					<th>Категория</th>
+					<th>Фильтры</th>
+				</tr>
+				<tr>
+					<td>Суп</td>
+					<td>
+						рыбный<br>
+						мясной<br>
+						вегетарианский<br>
+					</td>
+				</tr>
+				<tr>
+					<td>Главное блюдо</td>
+					<td>
+						рыбное<br>
+						мясное<br>
+						вегетарианское
+					</td>
+				</tr>
+				<tr>
+					<td>Напиток</td>
+					<td>
+						холодный<br>
+						горячий
+					</td>
+				</tr>
+			</tbody></table>
+
+			<p class="task__full_box_text">
+				У каждой кнопки должен быть data-атрибут - data-kind. Значение data-kind - это название фильтра на английском.
+				Например, для рыбных супов data-kind может быть со значением "fish".
+			</p>
+
+			<p class="task__full_box_text">
+				2. Для каждого объекта с блюдом добавьте новое свойство kind. Оно будет хранить значение для фильтрации.
+				Значение kind должно соответствовать значению data-kind одного из фильтров.
+				<br><br>
+				Например, если data-kind для вегетарианских супов - "veg", свойство kind супа "Гаспачо" тоже будет "veg".
+			</p>
+
+			<p class="task__full_text">
+				Пример объекта:
+			</p>
+			<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%205%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockupobject.png" alt="" class="task__full_img-small">
+
+			<p class="task__full_box_text">
+				3. Добавьте новые категории блюд на страницу.
+				<br><br>
+				Добавьте еще 2 категории блюд:
+			</p>
+
+			<ul class="task__full_box_list task__full_box_list-margin">
+				<li>Салаты и стартеры</li>
+				<li>Десерты</li>
+			</ul>
+
+			<p class="task__full_box_info">
+				Структура блоков с новыми категориями должна быть такой же как у остальных категорий. Сейчас новые блоки не
+				содержат
+				блюд, вы будете заполнять их в следующем шаге.
+			</p>
+
+			<p class="task__full_box_text">
+				В данные категории также необходимо добавить блок с фильтрами. Фильтры:
+			</p>
+
+			<table class="task__full_box_table table_type_one">
+				<tbody><tr>
+					<th>Категория</th>
+					<th>Фильтры</th>
+				</tr>
+				<tr>
+					<td>Салат или стартер</td>
+					<td>
+						рыбный<br>
+						мясной<br>
+						вегетарианский<br>
+					</td>
+				</tr>
+				<tr>
+					<td>Десерты</td>
+					<td>
+						маленькая порция<br>
+						средняя порция<br>
+						большая порция
+					</td>
+				</tr>
+			</tbody></table>
+
+			<p class="task__full_box_text">
+				4. Добавьте новые блюда.
+				<br><br>
+				Теперь необходимо добавить новые блюда во все существующие категории. В каждой категории должно быть по 6 блюд.
+				<br><br>
+				Добавьте в массив все недостающие блюда. Не забудьте указать все свойства, включая kind.
+				<br><br>
+				В каждой категории блюд должны быть представлены блюда всех возможных типов (kind) для данной категории. Ниже представлена
+				таблица с указанием количества блюд каждого типа для соответствующих им разделов меню (категорий блюд):
+			</p>
+
+			<table class="task__full_box_table table_type_one">
+				<tbody><tr>
+					<th>Категория</th>
+					<th>Тип</th>
+					<th>Количество</th>
+				</tr>
+				<tr>
+					<td rowspan="3">Суп</td>
+					<td>рыбный</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>мясной</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>вегетарианский</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td rowspan="3">Главное блюдо</td>
+					<td>рыбное</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>мясное</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>вегетарианское</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td rowspan="3">Салат или стартер</td>
+					<td>рыбный</td>
+					<td>1</td>
+				</tr>
+				<tr>
+					<td>мясной</td>
+					<td>1</td>
+				</tr>
+				<tr>
+					<td>вегетарианский</td>
+					<td>4</td>
+				</tr>
+				<tr>
+					<td rowspan="2">Напиток</td>
+					<td>холодный</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>горячий</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td rowspan="3">Десерт</td>
+					<td>маленькая порция</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>средняя порция</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>большая порция</td>
+					<td>1</td>
+				</tr>
+			</tbody></table>
+
+			<p class="task__full_box_text">
+				То есть, если сейчас в разделе с главными блюдами у вас добавлено 2 рыбных и 1 мясное блюдо, вам нужно добавить
+				еще 1 мясное и 2 вегетарианских.
+				<br><br>
+				Изображения с блюдами можно скачать по <a href="https://mospolytech-web-course.netlify.app/images/5/menu.zip" download="" target="_blank">ссылке</a>.
+			</p>
+
+			<p class="task__full_box_text">
+				5. Реализуйте отображение всех новых блюд на страницу с помощью JavaScript. Проверьте, что скрипт работает для
+				всех категорий.
+			</p>
+
+			<p class="task__full_box_text">
+				6. Создайте скрипт, с помощью которого можно фильтровать отображаемые в каждой категории блюда.
+			</p>
+			<ul class="task__full_box_h4 h4-list">
+				<ul class="task__full_box_list">
+					<li>При клике на кнопку с фильтром, в блоке отображаются только блюда с соответствующим значением kind.
+						<br><br>
+						Например, пользователь выбрал фильтр "мясное" в категории с главными блюдами. Вот как должен выглядеть блок
+						с категорией:
+						<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%205%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup7.png" alt="" class="task__full_img">
+					</li>
+					<li>Если затем пользователь выбрал другой фильтр, блюда должны измениться. Например, поменяем фильтр на
+						"рыбное":
+						<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%205%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup8.png" alt="" class="task__full_img">
+					</li>
+					<li>При клике на кнопку, ей добавляется класс "active" и меняется стиль ее отображения.
+					</li>
+					<li>Если кликнуть по выбранному фильтру повторно, класс "active" удаляется, а в блоке снова отображаются все
+						блюда.
+					</li>
+					<li>Если ни один из фильтров не был выбран, в блоке отображаются все блюда.
+					</li>
+				</ul>
+			</ul>
+
+			<p class="task__full_box_info">
+				Функции из предыдущей лабораторной должны работать корректно, в том числе после фильтрации блюд. 
+				То есть, например, если после фильтрации было скрыто выбранное ранее блюдо, оно не должно исчезнуть 
+				из формы заказа (выбор не должен сброситься).
+			</p>
+
+			<h3 class="task__full_box_title" style="margin-top: 40px;">
+				Видео
+			</h3>
+			<p class="task__full_box_text">
+				На видео продемонстрировано, как должна работать фильтрация и функции из предыдущей работы:
+			</p>
+
+			<video controls="controls" src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%205%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/video.mov" class="task__full_video"></video>
+
+			<div class="task__full_box task-requirements">
+				<h3 class="task__full_box_title">
+					Защита
+				</h3>
+
+				<p class="task__full_box_text">
+					Чтобы сдать лабораторную, необходимо выполнить все <a href="https://mospolytech-web-course.netlify.app/requirements" target="_blank">требования</a>.
+				</p>
+
+			</div>
+
+			<div class="task__full_box task-additions">
+				<h3 class="task__full_box_title">
+					Материалы для изучения
+				</h3>
+
+				<div class="task__full_box_link-box">
+					<h4 class="task__full_box_link-box_title">HTML</h4>
+					<a href="https://doka.guide/html/data-attributes/" target="_blank" class="task__full_box_link-box_link">Атрибуты&nbsp;data-*
+						[Doka]</a>
+					<a href="https://markheath.net/post/customize-radio-button-css" target="_blank" class="task__full_box_link-box_link">Customize Radio Button Appearance with CSS</a>
+				</div>
+
+				<div class="task__full_box_link-box">
+					<h4 class="task__full_box_link-box_title">JS</h4>
+					<a href="https://doka.guide/js/function/" target="_blank">Функция [Doka]</a>
+					<a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions" target="_blank">Функции
+						[MDN]</a>
+					<a href="https://doka.guide/js/array-push/" target="_blank">push() [Doka]</a>
+					<a href="https://doka.guide/js/array-pop/" target="_blank">pop() [Doka]</a>
+					<a href="https://doka.guide/js/array-unshift/" target="_blank">unshift() [Doka]</a>
+					<a href="https://doka.guide/js/array-shift/" target="_blank">shift() [Doka]</a>
+					<a href="https://doka.guide/js/array-slice/" target="_blank">slice() [Doka]</a>
+					<a href="https://doka.guide/js/array-splice/" target="_blank">splice() [Doka]</a>
+					<a href="https://doka.guide/js/includes/" target="_blank">includes() [Doka]</a>
+					<a href="https://doka.guide/js/element-classlist/" target="_blank">classList [Doka]</a>
+					<a href="https://doka.guide/js/closures/" target="_blank">Области видимости [Doka]</a>
+				</div>
+
+			</div>
+
+		</div>
+
+
+	</main>
+
+
+
+</body></html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex">
+	<title>Лабораторная работа № 1 | Основы веб-технологий</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+	<link href="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%201%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/css2.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%201%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/task.css">
+</head>
+
+<body>
+
+	<header class="header">
+		<h1 class="header__title">Лабораторная работа 1</h1>
+		<hr>
+	</header>
+
+	<main class="task">
+		<p class="task__short">
+			Сверстайте главную страницу сайта компании по доставке бизнес-ланчей и оформите сайт с помощью стилей CSS.
+		</p>
+
+		<div class="task__full">
+			<h2 class="task__full_title">
+				Порядок выполнения
+			</h2>
+			<p class="task__full_text">
+				Ваш заказчик - компания, доставляющая бизнес-ланчи в Москве. Ей необходим сайт, на котором клиенты смогут
+				ознакомиться с доступными для заказа блюдами, сформировать из них свой ланч и сделать заказ.
+				<br><br>
+				В ходе лабораторной работы 1 нужно сверстать главную страницу компании. Примерный макет страницы представлен
+				ниже.
+			</p>
+			<a href="https://mospolytech-web-course.netlify.app/images/1/mockup.png" target="_blank">
+				<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%201%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup.png" alt="" class="task__full_img">
+			</a>
+
+			<div class="task__full_box task-html">
+				<h3 class="task__full_box_title">
+					HTML
+				</h3>
+				<p class="task__full_box_text">
+					<b>Обязательные элементы</b>, которые должны быть на странице<br> (в скобках указано, какой HTML-тэг должен
+					быть использован):
+				</p>
+
+				<ul class="task__full_box_h4">
+					<li>Шапка сайта с заголовком и блоком навигации (header)</li>
+					<ul class="task__full_box_list">
+						<li>Заголовок (h1)</li>
+						<li>Блок навигации (nav) с ссылками (a) на другие страницы сайта<br>
+							<i>(пункт меню "Контакты" должен быть якорной ссылкой, ведущей к футеру)</i>
+						</li>
+					</ul>
+					<li>Блок с основным содержимым страницы (main)</li>
+					<ul class="task__full_box_list">
+						<li>Блок с информацией о компании (section)</li>
+						<ul>
+							<li>Заголовок (h2)</li>
+							<li>Изображение (img)</li>
+							<li>Текст (p)</li>
+						</ul>
+						<li>Блок с преимуществами компании (section)</li>
+						<ul>
+							<li>Заголовок (h2)</li>
+							<li>Маркированный список с преимуществами (ul). Описать минимум 3 преимущества</li>
+						</ul>
+						<li>Блок с самыми популярными блюдами (section)</li>
+						<ul>
+							<li>Заголовок (h2)</li>
+							<li>Таблица (table). Минимум 5 блюд в таблице</li>
+						</ul>
+					</ul>
+					<li>Футер с контактными данными (footer)</li>
+					<ul class="task__full_box_list">
+						<li>Контактные данные (p, a)</li>
+					</ul>
+				</ul>
+
+				<p class="task__full_box_info">
+					Чтобы проверить валидность кода, воспользуйтесь <a target="_blank" class="task__full_box_info_link" href="https://validator.w3.org/">validator.w3.org</a>.
+					<br><br>
+					Выберите понравившийся шрифт на <a target="_blank" class="task__full_box_info_link" href="https://fonts.google.com/">fonts.google.com</a> и подключите к
+					странице (он должен быть применен ко всему размещенному тексту).
+					<br><br>
+					После того, как вы сверстали страницу, необходимо оформить ее стилями CSS.
+				</p>
+
+				<div class="task__full_box task-css">
+					<h3 class="task__full_box_title">
+						CSS
+					</h3>
+					<p class="task__full_box_text">
+						В данном разделе перечислены обязательные CSS-свойства, которые должны быть использованы. Необязательно
+						использовать все свойства из перечня для каждого указанного тега. Например, вы можете использовать для тегов
+						p только свойство font-family, но тогда нужно применить font-size и color для других текстовых элементов.
+					</p>
+					<h4 class="task__full_box_h4">
+						Для блоков (div, header, footer, main, nav)
+					</h4>
+					<ul class="task__full_box_list">
+						<li>margin</li>
+						<li>padding </li>
+						<li>box-sizing: border-box (примените к <a href="https://htmlacademy.ru/blog/css/universal" target="_blank">универсальному селектору</a> )</li>
+					</ul>
+					<h4 class="task__full_box_h4">
+						Для текста
+					</h4>
+					<ul class="task__full_box_list">
+						<li>font-family<br>
+							<i>(к странице должен быть подключен Google-шрифт)</i>
+						</li>
+						<li>font-size</li>
+						<li>font-weight</li>
+						<li>color</li>
+					</ul>
+					<h4 class="task__full_box_h4">
+						Для изображений
+					</h4>
+					<ul class="task__full_box_list">
+						<li>width</li>
+						<li>height</li>
+					</ul>
+					<h4 class="task__full_box_h4">
+						Для таблиц
+					</h4>
+					<ul class="task__full_box_list">
+						<li>padding</li>
+						<li>border</li>
+						<li>border-collapse: collapse;</li>
+						<li>text-align</li>
+					</ul>
+					<h4 class="task__full_box_h4">
+						Для ссылок
+					</h4>
+					<ul class="task__full_box_list">
+						<li>text-decoration: none</li>
+						<li>font-family</li>
+						<li>font-size</li>
+						<li>color<br>
+							<i>(цвет ссылок должен изменяться при наведении, используйте :hover)</i>
+						</li>
+					</ul>
+					<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%201%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup_hover.png" alt="" class="task__full_box_list_img">
+					<h4 class="task__full_box_h4">
+						Для футера
+					</h4>
+					<ul class="task__full_box_list">
+						<li>background-color: black</li>
+						<li>color: white</li>
+					</ul>
+
+					<p class="task__full_box_info">
+						Для всех свойств, у которых не указаны значения, вы должны выбрать их самостоятельно.
+						<br><br>
+						Вы можете использовать дополнительные HTML-тэги и CSS-свойства на свое усмотрение.
+					</p>
+				</div>
+
+				<div class="task__full_box">
+					<h3 class="task__full_box_title">
+						Контент-сайта
+					</h3>
+					<p class="task__full_box_text">
+						<a href="https://mospolytech-web-course.netlify.app/images/lunch.jpg" download="" target="_blank">Ссылка</a> на изображение из макета.
+					</p>
+				</div>
+
+				<div class="task__full_box task-requirements">
+					<h3 class="task__full_box_title">
+						Защита
+					</h3>
+
+					<p class="task__full_box_text">
+						Чтобы сдать лабораторную, необходимо выполнить все <a href="https://mospolytech-web-course.netlify.app/requirements" target="_blank">требования</a>.
+					</p>
+				</div>
+
+				<div class="task__full_box task-additions">
+					<h3 class="task__full_box_title">
+						Материалы для изучения
+					</h3>
+
+					<div class="task__full_box_link-box">
+						<h4 class="task__full_box_link-box_title">HTML</h4>
+						<a href="https://webref.ru/course/html-basics/valid-document" target="_blank" class="task__full_box_link-box_link">Структура HTML-документа [WebReference]</a>
+						<a href="https://doka.guide/html/h1-h6/" target="_blank" class="task__full_box_link-box_link">Заголовки
+							[Doka]</a>
+						<a href="https://doka.guide/html/p/" target="_blank" class="task__full_box_link-box_link">Абзац текста
+							[Doka]</a>
+						<a href="https://doka.guide/html/ul/" target="_blank" class="task__full_box_link-box_link">Маркированный
+							список
+							[Doka]</a>
+						<a href="https://doka.guide/html/a/" target="_blank" class="task__full_box_link-box_link">Ссылки
+							[Doka]</a>
+						<a href="https://doka.guide/html/img/" target="_blank" class="task__full_box_link-box_link">Изображения
+							[Doka]</a>
+						<a href="https://doka.guide/html/div/" target="_blank" class="task__full_box_link-box_link">Тег div
+							[Doka]</a>
+						<a href="https://doka.guide/html/tables/" target="_blank" class="task__full_box_link-box_link">Таблицы
+							[Doka]</a>
+						<a href="https://doka.guide/html/class/" target="_blank" class="task__full_box_link-box_link">Атрибут класс
+							[Doka]</a>
+						<a href="https://doka.guide/html/flow/" target="_blank" class="task__full_box_link-box_link">Поток документа
+							[Doka]</a>
+						<a href="https://doka.guide/html/semantics/" target="_blank" class="task__full_box_link-box_link">Семантическая вёрстка
+							[Doka]</a>
+						<a href="https://htmlacademy.ru/blog/html/html-validation" target="_blank" class="task__full_box_link-box_link">Как проверить валидность HTML-разметки
+							[HTML Academy]</a>
+						<a href="https://ru.hexlet.io/courses/html/lessons/html_terms/theory_unit" target="_blank" class="task__full_box_link-box_link">Элементы, теги и атрибуты
+							[Hexlet]</a>
+					</div>
+
+					<div class="task__full_box_link-box">
+						<h4 class="task__full_box_link-box_title">CSS</h4>
+						<a href="https://doka.guide/css/adding-styles/" target="_blank" class="task__full_box_link-box_link">Подключение стилей
+							[Doka]</a>
+						<a href="https://doka.guide/css/tag-selector/" target="_blank" class="task__full_box_link-box_link">Селектор
+							по тегу
+							[Doka]</a>
+						<a href="https://doka.guide/css/class-selector/" target="_blank" class="task__full_box_link-box_link">Селекторы по классу [Doka]</a>
+						<a href="https://htmlacademy.ru/blog/css/descendant" target="_blank" class="task__full_box_link-box_link">Селектор потомков (пробел) [HTML Academy]</a>
+						<a href="https://htmlacademy.ru/blog/css/universal" target="_blank" class="task__full_box_link-box_link">Универсальный селектор * [HTML Academy]</a>
+						<a href="https://doka.guide/css/border/" target="_blank" class="task__full_box_link-box_link">border
+							[Doka]</a>
+						<a href="https://www.w3schools.com/css/css_table.asp" target="_blank" class="task__full_box_link-box_link">Стили для таблиц (border)
+							[W3Schools]</a>
+						<a href="https://doka.guide/css/cascade/" target="_blank" class="task__full_box_link-box_link">Принцип
+							каскада
+							[Doka]</a>
+						<a href="https://doka.guide/css/box-model/" target="_blank" class="task__full_box_link-box_link">Блочная
+							модель
+							[Doka]</a>
+						<a href="https://doka.guide/css/specificity/" target="_blank" class="task__full_box_link-box_link">Специфичность
+							[Doka]</a>
+						<a href="https://doka.guide/css/hover/" target="_blank" class="task__full_box_link-box_link">:hover
+							[Doka]</a>
+						<a href="https://doka.guide/css/background-color/" target="_blank" class="task__full_box_link-box_link">background-color
+							[Doka]</a>
+					</div>
+
+					<div class="task__full_box_link-box">
+						<h4 class="task__full_box_link-box_title">Другое</h4>
+						<a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files" target="_blank" class="task__full_box_link-box_link">Работа с файлами
+							[MDN]</a>
+						<a href="https://doka.guide/html/a/#vadim-makeev-sovetuet" target="_blank" class="task__full_box_link-box_link">Якорные ссылки
+							[Doka]</a>
+						<a href="https://htmlacademy.ru/blog/html/mailto" target="_blank" class="task__full_box_link-box_link">Как
+							сделать кликабельный номер телефона
+							[HTML Academy]</a>
+						<a href="https://htmlacademy.ru/blog/html/fonts-loading" target="_blank" class="task__full_box_link-box_link">Как
+							подключать шрифты
+							[HTML Academy]</a>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</main>
+
+
+
+</body></html>

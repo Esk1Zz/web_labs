@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex">
+	<title>Лабораторная работа № 9 | Основы веб-технологий</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+	<link href="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%209%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/css2.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%209%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/task.css">
+</head>
+
+<body>
+
+	<header class="header">
+		<h1 class="header__title">Лабораторная работа 9</h1>
+		<hr>
+	</header>
+
+	<main class="task">
+		<p class="task__short">
+			Добавьте страницу просмотра истории заказов и реализуйте функции 
+			редактирования и удаления заказов.
+		</p>
+
+		<div class="task__full">
+			<h2 class="task__full_title">
+				Порядок выполнения
+			</h2>
+
+			<p class="task__full_box_text">
+				1. Добавьте страницу "Заказы", разместите ссылку на неё 
+				в навигационном меню. Примерный макет страницы приведён ниже.
+			</p>
+
+			<a href="https://mospolytech-web-course.netlify.app/images/9/mockup1.png" target="_blank">
+				<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%209%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup1.png" alt="" class="task__full_img">
+			</a>
+
+			<ul class="task__full_box_h4 h4-list">
+				<li>
+					На странице должен располагаться список заказов, оформленных
+					ранее текущим пользователем. Сортировка списка – по убыванию
+					даты оформления (т. е. сначала новые заказы).
+				</li>
+				<li>
+					Для каждого заказа должны отображаться: порядковый номер
+					в списке, дата оформления заказа, состав заказа (названия
+					блюд, перечисленные через запятую), стоимость заказа, время
+					доставки (для заказов ко времени, для остальных – подпись
+					"Как можно скорее (с 7:00 до 23:00)"), кнопки "Подробнее",
+					"Редактирование", "Удаление".
+				</li>
+				<li>
+					Вместо кнопок можно использовать иконки
+					(например, <a href="https://icons.getbootstrap.com/" target="_blank">Bootstrap Icons</a>).
+				</li>
+			</ul>
+
+			<p class="task__full_box_text">
+				2. Реализуйте функциональность кнопок "Подробнее", "Редактирование", "Удаление".
+			</p>
+
+			<ul class="task__full_box_h4 h4-list">
+				<li>
+					По нажатию на кнопку "Подробнее" должно открываться модальное 
+					окно с полной информацией о заказе (см. макет ниже).
+				</li>
+				<li>
+					По нажатию на кнопку "Редактирование" должно открываться модальное
+					окно с формой редактирования заказа (см. макет ниже). Значения 
+					полей формы должны быть установлены значениями соответствующих 
+					полей редактируемого заказа. Для редактирования доступны поля 
+					full_name, email, phone, delivery_address, delivery_type, 
+					delivery_time, comment.
+				</li>
+				<li>
+					По нажатию на кнопку "Удаление" должно открываться модальное
+					окно подтверждения удаления (см. макет ниже).
+				</li>
+				<li>
+					В правом верхнем углу каждого модального окна должен быть 
+					"крестик", по нажатию на который модальное окно закрывается. 
+					Внизу модального окна должны располагаться кнопки действий: 
+					для просмотра – "Ок" (закрытие окна), для редактирования – 
+					"Сохранить" (отправка данных на сервер) и "Отмена" (закрытие 
+					окна), для удаления – "Да" (отправка запроса на сервер) и 
+					"Отмена" (закрытие окна).
+				</li>
+				<li>
+					При возникновении ошибок при отправке запроса или его обработке 
+					на стороне сервера пользователю должно быть отображено уведомление 
+					об ошибке. В случае успешного выполнения операции (редактирования, 
+					удаления), модальное окно должно быть скрыто, и пользователю 
+					должно быть отображено уведомление об успешном завершении операции 
+					(например, "Заказ успешно изменён"). Формат отображения уведомлений 
+					на усмотрение студента.
+				</li>
+				<li>
+					При успешном изменении или удалении заказа список заказов должен быть 
+					обновлён (т. е. удалённый заказ должен быть убран из списка, а 
+					информация об изменившемся заказе должна быть обновлена).
+				</li>
+			</ul>
+
+			<div class="task__modals_gallery">
+				<section>
+					<a href="https://mospolytech-web-course.netlify.app/images/9/mockup2.png" target="_blank">
+						<img width="100%" src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%209%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup2.png" alt="">
+					</a>
+				</section>
+				<section>
+					<a href="https://mospolytech-web-course.netlify.app/images/9/mockup3.png" target="_blank">
+						<img width="100%" src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%209%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup3.png" alt="">
+					</a>
+				</section>
+				<section>
+					<a href="https://mospolytech-web-course.netlify.app/images/9/mockup4.png" target="_blank">
+						<img width="100%" src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%209%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup4.png" alt="">
+					</a>
+				</section>
+			</div>
+
+			<h2 class="task__full_title">API URL</h2>
+
+			<ul class="task__full_box_h4 h4-list">
+				<li>Для тех, кто использует хостинг Московского Политеха: http://lab8-api.std-900.ist.mospolytech.ru</li>
+				<li>Для тех, кто использует Netlify или GitHub Pages: https://edu.std-900.ist.mospolytech.ru</li>
+			</ul>
+
+			<h2 class="task__full_title">Инструкция по работе с API</h2>
+
+			<p class="task__full_box_text">
+				Для получения доступа к API необходимо пройти процедуру авторизации. Для авторизации
+				нужно указать в качестве параметра запроса api_key значение уникального ключа, который
+				выдаётся каждому пользователю. Ключ представляет собой идентификатор UUIDv4, который
+				является случайным 16-байтным номером (например,
+				123e4567-e89b-12d3-a456-426655440000).
+			</p>
+			<p class="task__full_box_text">
+				<strong>
+					Для получения ключа необходимо перейти по ссылке, которая выложена 
+					в СДО Московского Политеха
+				</strong>
+			</p>
+
+			<p class="task__full_box_text">
+				<strong>
+					Обратите внимание, что параметр api_key всегда передаётся в строке запроса.
+				</strong>
+			</p>
+
+			<p class="task__full_box_text">
+				Пользователь может просматривать, редактировать и удалять только свои заказы. В один
+				момент времени в базе данных может быть не более 10 заказов, созданных одним и тем же
+				пользователем.
+			</p>
+
+			<p class="task__full_box_text">
+				Если пользователь попробует совершить действие, не пройдя авторизацию, в качестве ответа
+				на его запрос придёт сообщение:
+				</p><pre>{"error": "Для получения доступа к API необходимо пройти процедуру авторизации. Для этого нужно передать в запросе персональный API Key."}
+				</pre>
+			<p></p>
+
+			<p class="task__full_box_text">
+				При передаче параметров в POST- и PUT-запросах данные должны передаваться в теле
+				запроса в формате application/json (нужно вручную сериализовать данные 
+				и установить значение заголовка Content-Type) или multipart/form-data 
+				(достаточно при отправке данных формы воспользоваться объектом FormData).
+			</p>
+
+			<p class="task__full_box_text">
+				При оформлении заказа в запросе к серверу должны быть указаны значения обязательных полей:
+			</p>
+			
+			<div class="table__wrapper">
+				<table class="task__full_box_table">
+					<thead>
+						<tr>
+							<th>Название</th>
+							<th>Тип</th>
+							<th>Обязательное</th>
+							<th>Только для чтения</th>
+							<th>Примечание</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>id</td>
+							<td>Integer</td>
+							<td></td>
+							<td>Да</td>
+							<td>Устанавливается сервером.</td>
+						</tr>
+						<tr>
+							<td>full_name</td>
+							<td>String</td>
+							<td>Да</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>email</td>
+							<td>String</td>
+							<td>Да</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>subscribe</td>
+							<td>Boolean</td>
+							<td>Нет</td>
+							<td></td>
+							<td>Допустимы значения 0 и 1.</td>
+						</tr>
+						<tr>
+							<td>phone</td>
+							<td>String</td>
+							<td>Да</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>delivery_address</td>
+							<td>String</td>
+							<td>Да</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>delivery_type</td>
+							<td>String</td>
+							<td>Да</td>
+							<td></td>
+							<td>Допустимы значения "now" и "by_time".</td>
+						</tr>
+						<tr>
+							<td>delivery_time</td>
+							<td>Time</td>
+							<td>Нет</td>
+							<td></td>
+							<td>
+								Значение передаётся в формате HH:MM.<br>
+								Доступное время доставки: с 7:00 до 23:00 с шагом 5 минут.<br>
+								Не должно быть пустым, если delivery_type=by_time.<br>
+								Не должно быть раньше текущего времени.
+							</td>
+						</tr>
+						<tr>
+							<td>comment</td>
+							<td>String</td>
+							<td>Нет</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>soup_id</td>
+							<td>Integer</td>
+							<td>Нет</td>
+							<td></td>
+							<td>Обязательность поля зависит от состава комбо.</td>
+						</tr>
+						<tr>
+							<td>main_course_id</td>
+							<td>Integer</td>
+							<td>Нет</td>
+							<td></td>
+							<td>Обязательность поля зависит от состава комбо.</td>
+						</tr>
+						<tr>
+							<td>salad_id</td>
+							<td>Integer</td>
+							<td>Нет</td>
+							<td></td>
+							<td>Обязательность поля зависит от состава комбо.</td>
+						</tr>
+						<tr>
+							<td>drink_id</td>
+							<td>Integer</td>
+							<td>Да</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>dessert_id</td>
+							<td>Integer</td>
+							<td>Нет</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>created_at</td>
+							<td>DateTime</td>
+							<td></td>
+							<td>Да</td>
+							<td>Устанавливается сервером.</td>
+						</tr>
+						<tr>
+							<td>updated_at</td>
+							<td>DateTime</td>
+							<td></td>
+							<td>Да</td>
+							<td>Устанавливается сервером.</td>
+						</tr>
+						<tr>
+							<td>student_id</td>
+							<td>Integer</td>
+							<td></td>
+							<td>Да</td>
+							<td>Устанавливается сервером.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<p class="task__full_box_text">
+				Доступные пользователю действия представлены в таблице:
+			</p>
+			
+			<div class="table__wrapper">
+				<table class="task__full_box_table">
+					<thead>
+						<tr>
+							<th>Действие</th>
+							<th>Метод и путь</th>
+							<th>Формат ответа</th>
+							<th>Примечание</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Получить данные всех блюд</td>
+							<td>GET /labs/api/dishes</td>
+							<td>JSON [{item1},{item2},...{itemN}]</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Получить данные конкретного блюда</td>
+							<td>GET /labs/api/dishes/{int:dish_id}</td>
+							<td>JSON {Item}</td>
+							<td>Вместо {int:dish_id} нужно подставить целое число – идентификатор блюда. </td>
+						</tr>
+						<tr>
+							<td>Получить данные всех заказов</td>
+							<td>GET /labs/api/orders</td>
+							<td>JSON [{item1},{item2},...{itemN}]</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Получить данные конкретного заказа</td>
+							<td>GET /labs/api/orders/{int:order_id}</td>
+							<td>JSON {Item}</td>
+							<td>Вместо {int:order_id} нужно подставить целое число – идентификатор заказа.</td>
+						</tr>
+						<tr>
+							<td>Создать новый заказ</td>
+							<td>POST /labs/api/orders</td>
+							<td>JSON {newItem}</td>
+							<td>Нужно передать значения всех обязательных полей.</td>
+						</tr>
+						<tr>
+							<td>Изменить заказ</td>
+							<td>PUT /labs/api/orders/{int:order_id}</td>
+							<td>JSON {updateItem}</td>
+							<td>
+								Вместо {int:order_id} нужно подставить целое число – идентификатор заказа.<br>
+								Достаточно передать только значения изменившихся полей.
+							</td>
+						</tr>
+						<tr>
+							<td>Удалить заказ</td>
+							<td>DELETE /labs/api/orders/{int:order_id}</td>
+							<td>JSON {Item}</td>
+							<td>Вместо {int:order_id} нужно подставить целое число – идентификатор заказа.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			
+
+
+
+			<div class="task__full_box task-requirements">
+				<h3 class="task__full_box_title">
+					Защита
+				</h3>
+
+				<p class="task__full_box_text">
+					Чтобы сдать лабораторную, необходимо выполнить все <a href="https://mospolytech-web-course.netlify.app/requirements" target="_blank">требования</a>.
+				</p>
+
+			</div>
+
+			<div class="task__full_box task-additions">
+				<h3 class="task__full_box_title">
+					Материалы для изучения
+				</h3>
+
+				<div class="task__full_box_link-box">
+					<a href="https://skillbox.ru/media/code/chto-takoe-modalnye-okna-i-kak-ikh-effektivno-ispolzovat/" target="_blank">Что такое модальные окна [SkillBox]</a>
+					<a href="https://doka.guide/recipes/popup/" target="_blank">Попап [Doka]</a>
+					<a href="https://learn.javascript.ru/fetch" target="_blank">Fetch [Learn JS]</a>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank">Fetch API [MDN]</a>
+					<a href="https://doka.guide/js/fetch/" target="_blank">fetch() [Doka]</a>
+					<a href="https://developer.mozilla.org/ru/docs/Web/HTTP/CORS" target="_blank">Cross-Origin Resource Sharing
+						(CORS) [MDN]</a>
+				</div>
+
+			</div>
+
+		</div>
+
+
+	</main>
+
+
+
+</body></html>

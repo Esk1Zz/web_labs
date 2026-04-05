@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex">
+	<title>Лабораторная работа № 6 | Основы веб-технологий</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+	<link href="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%206%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/css2.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%206%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/task.css">
+</head>
+
+<body>
+
+	<header class="header">
+		<h1 class="header__title">Лабораторная работа 6</h1>
+		<hr>
+	</header>
+
+	<main class="task">
+		<p class="task__short">
+			Добавьте блок с доступными для заказа вариантами ланча. 
+			Создайте скрипт, проверяющий состав ланча при отправке формы.
+			Реализуйте показ уведомлений для пользователей.
+		</p>
+
+		<div class="task__full">
+			<h2 class="task__full_title">
+				Порядок выполнения
+			</h2>
+
+			<p class="task__full_text" id="mockup_form">
+				Примерные макеты представлены ниже.
+				<br><br>
+				Макет блока с доступными для заказа вариантами:
+			</p>
+
+			<a href="https://mospolytech-web-course.netlify.app/images/6/mockup1.png" target="_blank">
+				<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%206%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup1.png" alt="" class="task__full_img">
+			</a>
+
+			<p class="task__full_text">
+				Макет уведомления:
+			</p>
+
+			<a href="https://mospolytech-web-course.netlify.app/images/6/mockup2.png" target="_blank">
+				<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%206%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup2.png" alt="" class="task__full_img">
+			</a>
+
+			<!-- <p class="task__full_text">
+				<a href="images/6/mockupfull.png" target="_blank">Полный макет
+				</a> страницы:
+			</p> -->
+
+			<p class="task__full_box_text">
+				1. Создайте блок с доступными для заказа вариантами ланча.
+				<br><br>
+				Структура блока:
+			</p>
+
+			<ul class="task__full_box_h4 h4-list">
+				<li>Заголовок</li>
+				<li>Блок с вариантами (grid-контейнер, с 3 колонками на каждой строке)</li>
+				<ul class="task__full_box_list">
+					<li>Блок каждого варианта ланча (flex-контейнер)</li>
+					<ul>
+						<li>Блок каждого блюда (flex-контейнер, направление главной оси - сверху вниз)</li>
+						<ul>
+							<li>Изображение блюда</li>
+							<li>Подпись</li>
+						</ul>
+					</ul>
+				</ul>
+			</ul>
+
+			<p class="task__full_box_text">
+				Изображения с блюдами можно скачать <a href="https://mospolytech-web-course.netlify.app/images/6/icons.zip" download="" target="_blank">здесь</a>.
+			</p>
+
+			<p class="task__full_box_text">
+				Доступные для заказа варианты:
+			</p>
+
+			<table class="task__full_box_table table_type_one">
+				<tbody><tr>
+					<th>1</th>
+					<th>2</th>
+					<th>3</th>
+					<th>4</th>
+					<th>5</th>
+				</tr>
+				<tr>
+					<td>
+						Суп<br>
+						Главное блюдо<br>
+						Салат<br>
+						Напиток
+					</td>
+					<td>
+						Суп<br>
+						Главное блюдо<br>
+						Напиток
+					</td>
+					<td>
+						Суп<br>
+						Салат<br>
+						Напиток
+					</td>
+					<td>
+						Главное блюдо<br>
+						Салат<br>
+						Напиток
+					</td>
+					<td>
+						Главное блюдо<br>
+						Напиток
+					</td>
+				</tr>
+			</tbody></table>
+
+			<p class="task__full_box_text">
+				В отдельном блоке необходимо разместить информацию о десертах. Их можно добавлять в любой вид ланча. Эту
+				информацию нужно также отобразить на странице (поместить ниже подписи; шрифт меньше, чем у подписи на 2 пункта).
+			</p>
+
+			<p class="task__full_box_text">
+				Измените свойства для изображений данного блока при наведении на них курсора. Используйте для этого transform с
+				функциями трансформации translateY и scale.
+				<br><br>
+				На видео продемонстрирована работа transform:
+			</p>
+
+			<video controls="controls" src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%206%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/transform.mov" class="task__full_video"></video>
+
+			<p class="task__full_box_text">
+				2. Создайте скрипт, который будет проверять все ли необходимые блюда добавил пользователь.
+			</p>
+
+			<p class="task__full_box_text">
+				Скрипт должен запускаться, когда пользователь отправляет форму. Пользователь может добавлять в заказ
+				произвольные блюда. В итоге у него должен получиться один из вариантов ланчей, описанных выше. Если перечень
+				выбранных блюд не соответствует ни одному из возможных вариантов (комбо), у пользователя не должно быть
+				возможности оформить заказ (форма не должна отправляться), и на странице должно быть выведено уведомление с
+				информацией о недостающих блюдах.
+			</p>
+
+			<p class="task__full_box_text">
+				Существует 5 видов уведомлений:
+			</p>
+
+			<table class="task__full_box_table table_type_one table_type_one_img">
+				<tbody><tr>
+					<th style="width: 30%;">Текст уведомления</th>
+					<th style="width: 30%;">Когда выводится</th>
+					<th style="width: 40%;">Изображение</th>
+				</tr>
+				<tr>
+					<td>«Ничего не выбрано. Выберите блюда для заказа»</td>
+					<td>Не добавлено ни одно блюдо</td>
+					<td>
+						<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%206%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup3.png" alt="">
+					</td>
+				</tr>
+				<tr>
+					<td>«Выберите напиток»</td>
+					<td>Выбраны все необходимые блюда, кроме напитка</td>
+					<td>
+						<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%206%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup4.png" alt="">
+					</td>
+				</tr>
+				<tr>
+					<td>«Выберите главное блюдо/салат/стартер»</td>
+					<td>Выбран суп, но не выбраны главное блюдо/салат/стартер</td>
+					<td>
+						<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%206%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup5.png" alt="">
+					</td>
+				</tr>
+				<tr>
+					<td>«Выберите суп или главное блюдо»</td>
+					<td>Выбран салат/стартер, но не выбраны суп/главное блюдо</td>
+					<td>
+						<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%206%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup6.png" alt="">
+					</td>
+				</tr>
+				<tr>
+					<td>«Выберите главное блюдо»</td>
+					<td>Выбран напиток/десерт</td>
+					<td>
+						<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%206%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup7.png" alt="">
+					</td>
+				</tr>
+			</tbody></table>
+
+			<p class="task__full_box_text">
+				Уведомление должно создаваться динамически каждый раз, когда при попытке отправить форму скрипт обнаруживает,
+				что какое-то блюдо не добавлено.
+				<br><br>
+				Оно должно отображаться поверх остальных элементов на странице и не менять положение при прокрутке.
+				Также, его нужно отцентровать по вертикали и горизонтали.
+				<br><br>
+				При наведении на кнопку "Окей", изменяется цвет фона и текста кнопки.
+				<br><br>
+				При нажатии на кнопку уведомление исчезает.
+			</p>
+
+			<p class="task__full_box_text">
+				На видео продемонстрирована работа уведомления:
+			</p>
+
+			<video controls="controls" src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%206%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/popup.mov" class="task__full_video"></video>
+
+			<div class="task__full_box task-requirements">
+				<h3 class="task__full_box_title">
+					Защита
+				</h3>
+
+				<p class="task__full_box_text">
+					Чтобы сдать лабораторную, необходимо выполнить все <a href="https://mospolytech-web-course.netlify.app/requirements" target="_blank">требования</a>.
+				</p>
+
+			</div>
+
+			<div class="task__full_box task-additions">
+				<h3 class="task__full_box_title">
+					Материалы для изучения
+				</h3>
+
+				<div class="task__full_box_link-box">
+					<h4 class="task__full_box_link-box_title">CSS</h4>
+
+					<a href="https://doka.guide/css/transform/" target="_blank">transform [Doka]</a>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateX" target="_blank">translateX() [MDN]</a>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateY" target="_blank">translateY() [MDN]</a>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale" target="_blank">scale()
+						[MDN]</a>
+					<a href="https://doka.guide/css/position/" target="_blank">position [Doka]</a>
+					<a href="https://doka.guide/css/top-left-right-bottom/" target="_blank">top,&nbsp;left,&nbsp;right,&nbsp;bottom [Doka]</a>
+
+					<a href="" target="_blank"></a>
+				</div>
+
+				<div class="task__full_box_link-box">
+					<h4 class="task__full_box_link-box_title">JS</h4>
+
+					<a href="https://learn.javascript.ru/forms-submit" target="_blank">Отправка формы: событие и метод submit
+						[JS.RU]</a>
+					<a href="https://doka.guide/js/event-submit/" target="_blank">submit [Doka]</a>
+					<a href="https://doka.guide/js/event-prevent-default/" target="_blank">preventDefault() [Doka]</a>
+					<a href="https://developer.mozilla.org/ru/docs/Web/API/Event/preventDefault" target="_blank">preventDefault()
+						[MDN]</a>
+					<a href="https://learn.javascript.ru/modifying-document" target="_blank">Изменение документа [JS.RU]</a>
+					<a href="https://developer.mozilla.org/ru/docs/Web/API/Document/createElement" target="_blank">document.createElement [MDN]</a>
+					<a href="https://learn.javascript.ru/modifying-document#sozdanie-elementa" target="_blank">Создание
+						элемента [JS.RU]</a>
+					<a href="https://developer.mozilla.org/ru/docs/Web/API/Element/append" target="_blank">Element.append()
+						[MDN]</a>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/before" target="_blank">before() [MDN]</a>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/after" target="_blank">after() [MDN]</a>
+					<a href="https://learn.javascript.ru/modifying-document#metody-vstavki" target="_blank">Методы вставки
+						[JS.RU]</a>
+					<a href="https://developer.mozilla.org/ru/docs/Web/API/Element/remove" target="_blank">Element.remove()
+						[MDN]</a>
+					<a href="https://learn.javascript.ru/modifying-document#udalenie-uzlov" target="_blank">Удаление узлов
+						[JS.RU]</a>
+				</div>
+
+				<div class="task__full_box_link-box">
+					<h4 class="task__full_box_link-box_title">Другое</h4>
+					<a href="https://learn.javascript.ru/unicode" target="_blank">Юникод, внутреннее устройство строк</a>
+					<a href="https://symbl.cc/ru/emoji/" target="_blank">Emoji юникод</a>
+				</div>
+
+			</div>
+
+		</div>
+
+
+	</main>
+
+
+
+</body></html>

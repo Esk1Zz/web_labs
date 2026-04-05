@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex">
+	<title>Лабораторная работа № 2 | Основы веб-технологий</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+	<link href="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%202%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/css2.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%202%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/task.css">
+</head>
+
+<body>
+
+	<header class="header">
+		<h1 class="header__title">Лабораторная работа 2</h1>
+		<hr>
+	</header>
+
+	<main class="task">
+		<p class="task__short">
+			Сверстайте страницу «Собрать ланч», где будет размещено меню компании. Сделайте страницу адаптивной для планшетов
+			и мобильных устройств. Затем сделайте адаптивной главную страницу сайта.
+		</p>
+
+		<div class="task__full">
+			<h2 class="task__full_title">
+				Порядок выполнения
+			</h2>
+			<p class="task__full_text">
+				Примерный макет страницы «Собрать ланч» представлен ниже.
+			</p>
+			<a href="https://mospolytech-web-course.netlify.app/images/2/mockup_menu1.png" target="_blank">
+				<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%202%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup_menu1.png" alt="" class="task__full_img">
+			</a>
+
+			<div class="task__full_box task-html">
+				<h3 class="task__full_box_title">
+					HTML
+				</h3>
+				<p class="task__full_box_text">
+					<b>Обязательные элементы</b>, которые должны быть на странице<br> (в скобках HTML-тег, который нужно
+					использовать):
+				</p>
+
+				<ul class="task__full_box_h4 h4-list">
+					<li>Шапка сайта с заголовком и блоком навигации (header)</li>
+					<li>Блок с основным содержимым страницы (main)</li>
+					<ul class="task__full_box_list">
+						<li>Блок с супами (section)</li>
+						<ul>
+							<li>Заголовок (h2)</li>
+							<li>Блок с блюдами (div)</li>
+							<ul>
+								<li>Блок каждого блюда (div)</li>
+								<ul>
+									<li>Изображение (img)</li>
+									<li>Текст с ценой (p)</li>
+									<li>Текст с названием (p)</li>
+									<li>Текст с весом/объемом (p)</li>
+									<li>Кнопка «Добавить» (button)</li>
+								</ul>
+							</ul>
+							<li>Блок с главными блюдами (такое же наполнение, как у блока с супами)</li>
+							<li>Блок с напитками (такое же наполнение, как у блока с супами)</li>
+						</ul>
+					</ul>
+					<li>Футер с контактными данными (footer)</li>
+				</ul>
+
+				<p class="task__full_box_info">
+					Подключите к текущей странице тот же шрифт, который вы использовали на главной.
+					<br><br>
+					Добавьте перекрёстные ссылки в навигационное меню обеих страниц.
+				</p>
+
+				<div class="task__full_box task-css">
+					<h3 class="task__full_box_title">
+						CSS
+					</h3>
+					<p class="task__full_box_text">
+						Подключите к странице основные стили, которые вы использовали для главной страницы.
+					</p>
+					<p class="task__full_box_text">
+						Создайте дополнительный файл стилей для страницы «Собрать ланч».
+					</p>
+					<h4 class="task__full_box_h4">
+						Блок с блюдами (section&gt;div)
+					</h4>
+					<p class="task__full_box_another-text">
+						Создайте сетку с помощью CSS Grid:
+					</p>
+					<ul class="task__full_box_list">
+						<li>Количество колонок: 3</li>
+						<li>Размер каждого столбца: 1fr</li>
+						<li>Отступ между элементами сетки: 10px</li>
+					</ul>
+					<h4 class="task__full_box_h4">
+						Блок каждого блюда (section&gt;div&gt;div)
+					</h4>
+					<p class="task__full_box_another-text">Создайте сетку с помощью Flex:</p>
+					<ul class="task__full_box_list">
+						<li>Направление элементов в контейнере: вертикальное</li>
+						<li>Нужно предусмотреть, чтобы в случае, если название одного из
+							блюд длиннее, чем у других (и занимает две строки, например), 
+							выравнивание кнопок «Добавить» и значения веса/объёма блюда 
+							было на одном уровне для всех элементов строки (см. пример с 
+							главными блюдами в макете).
+						</li>
+					</ul>
+					<p class="task__full_box_another-text">Другие стили:</p>
+					<ul class="task__full_box_list">
+						<li>Внутренний отступ: 30px - снизу и сверху, 40px - справа и слева</li>
+						<li>Радиус закругления: 35px</li>
+						<li>Вид курсора: pointer</li>
+						<li>Свойство для добавления тени filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13))</li>
+						<li>Цвет фона: белый</li>
+					</ul>
+					<p class="task__full_box_another-text">Поведение при наведении на блок с блюдом (hover):</p>
+					<ul class="task__full_box_list">
+						<li>Появление сплошной границы толщиной 2px, цвет tomato вокруг блока</li>
+					</ul>
+					<p class="task__full_box_another-text">
+						Также, при наведении на блок с блюдом должен изменяться цвет фона
+						кнопки внутри блока
+						<br>
+						<i>(используйте <a href="https://www.geeksforgeeks.org/what-is-contextual-selector-in-css/" target="_blank">контекстный селектор</a>).</i>
+						<br>
+						На изображении ниже представлено как должны работать стили с hover:
+					</p>
+					<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%202%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup_menu_hover.png" alt="" class="task__full_box_list_img">
+					<h4 class="task__full_box_h4">
+						Изображение (section&gt;div&gt;div&gt;img)
+					</h4>
+					<ul class="task__full_box_list">
+						<li>Растягивается на всю ширину контейнера</li>
+						<li>Радиус закругления: 35px</li>
+					</ul>
+					<h4 class="task__full_box_h4">
+						Цена (section&gt;div&gt;div&gt;p с ценой)
+					</h4>
+					<ul class="task__full_box_list">
+						<li>Увеличить размер шрифта</li>
+					</ul>
+					<h4 class="task__full_box_h4">
+						Название блюда (section&gt;div&gt;div&gt;p с названием)
+					</h4>
+					<ul class="task__full_box_list">
+						<li>Увеличить размер шрифта</li>
+					</ul>
+					<h4 class="task__full_box_h4">
+						Вес/объем (section&gt;div&gt;div&gt;p с весом/объемом)
+					</h4>
+					<ul class="task__full_box_list">
+						<li>Изменить цвет текста на серый</li>
+					</ul>
+					<h4 class="task__full_box_h4">
+						Кнопка (section&gt;div&gt;div&gt;button)
+					</h4>
+					<ul class="task__full_box_list">
+						<li>Цвет фона #f1eee9</li>
+						<li>Обязательный отступ сверх</li>
+						<li>Внутренние отступы: 10px - снизу и сверху, 30px - справа и слева</li>
+						<li>Радиус закругления: 10px</li>
+						<li>Вид курсора: pointer</li>
+					</ul>
+					<h4 class="task__full_box_h4">
+						Изменение существующего меню (nav)
+					</h4>
+					<p class="task__full_box_another-text">
+						Текущее меню сверстано при помощи обычных ссылок. Чтобы было удобнее управлять сеткой меню, сделайте его
+						флексбоксом
+					</p>
+					<p class="task__full_box_another-text">
+						Также, добавьте для меню следующие свойства
+					</p>
+					<ul class="task__full_box_list">
+						<li>Отступ для флексов: 15px</li>
+						<li>Разрешите флекс-элементам переноситься на новые строки</li>
+					</ul>
+					<p class="task__full_box_another-text">
+						Теперь на сайте существует уже 2 страницы. Необходимо выделять активную с помощью стилей. Добавьте активной
+						ссылке класс active на обеих страницах и задайте для активной ссылки цвет текста tomato.
+						<br><br>
+						Вот как это должно выглядеть, если текущая страница «Собрать ланч»:
+					</p>
+					<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%202%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup_menu_active.png" alt="" class="task__full_box_list_img">
+					<h4 class="task__full_box_h4">
+						Доработка футера (footer)
+					</h4>
+					Доработайте оформление главной страницы и страницы «Собрать ланч» таким образом, 
+					чтобы в случае, если контент страницы не занимает всю высоту области просмотра, 
+					положение футера было внизу страницы (области просмотра). 
+					<h4 class="task__full_box_h4">
+						Адаптивность
+					</h4>
+					<p class="task__full_box_another-text">
+						<b>Страница «Собрать ланч»</b>
+						<br>
+						Измените стили блоков для ширины экрана ≤800px и ≤600px.
+					</p>
+					<table class="task__full_box_table" width="80%">
+						<tbody><tr>
+							<th>≤800px</th>
+							<th>≤600px</th>
+						</tr>
+						<tr>
+							<td>
+								<b>Блок с блюдами (section&gt;div)</b>
+								<br>
+								Кол-во колонок: 2<br>
+								<b>Навигационное меню (nav)</b><br>
+								Выравнивание флекс-элементов по основной оси (англ. main 
+								axis) таким образом, чтобы между элементами было 
+								одинаковое расстояние, а между первым и последним элементами и 
+								границей флекс-контейнера не было отступа.
+							</td>
+							<td>
+								<b>Главный заголовок страницы (h1)</b><br>
+								Выравнивание текста: по центру<br>
+								<b>Навигационное меню (nav)</b><br>
+								Направление элементов в контейнере: вертикальное<br>
+								Выравнивание флекс-элементов по центру поперечной оси (англ. cross axis)<br>
+								Увеличить шрифт для ссылок на 4px<br>
+								<b>Заголовок раздела (section&gt;h2)</b>
+								<br>
+								Выравнивание текста: по центру
+								<br>
+								<b>Блок с блюдами (section&gt;div)</b>
+								<br>
+								Кол-во колонок: 1
+							</td>
+						</tr>
+					</tbody></table>
+					<p class="task__full_box_another-text">
+						<b>Главная страница</b>
+						<br>
+						Для главной страницы также добавим стили для ширины ≤400px, чтобы таблица помещалась на странице без
+						горизонтальной полосы прокрутки.
+					</p>
+					<table class="task__full_box_table" width="80%">
+						<tbody><tr>
+							<th>≤800px</th>
+							<th>≤600px</th>
+							<th>≤400px</th>
+						</tr>
+						<tr>
+							<td>
+								<b>Изображение в блоке «О нас»</b>
+								<br>
+								Ширина: 500px<br>
+								<b>Навигационное меню (nav)</b><br>
+								Выравнивание флекс-элементов по основной оси (англ. main
+								axis) таким образом, чтобы между элементами было
+								одинаковое расстояние, а между первым и последним элементами и
+								границей флекс-контейнера не было отступа.
+							</td>
+							<td>
+								<b>Главный заголовок страницы (h1)</b><br>
+								Выравнивание текста: по центру<br>
+								<b>Навигационное меню (nav)</b><br>
+								Направление элементов в контейнере: вертикальное<br>
+								Выравнивание флекс-элементов по центру поперечной оси (англ. cross axis)<br>
+								Увеличить шрифт для ссылок на 4px<br>
+								<b>Изображение в блоке «О нас»</b><br>
+								Ширина: 100%<br>
+								<b>Текст таблицы</b><br>
+								Уменьшить шрифт на 2px
+							</td>
+							<td>
+								<b>Текст таблицы</b>
+								<br>
+								Уменьшить шрифт еще на 2px
+							</td>
+						</tr>
+					</tbody></table>
+					<p class="task__full_box_info">
+						Вы можете использовать дополнительные HTML-теги и CSS-свойства на своё усмотрение.
+					</p>
+				</div>
+
+				<div class="task__full_box task-requirements">
+					<h3 class="task__full_box_title">
+						Требования
+					</h3>
+					<ul class="task__full_box_list">
+						<li>Все HTML-теги из задания должны быть использованы.</li>
+						<li>Код должен быть валиден (не должно быть ошибок в валидаторе <a target="_blank" class="task__full_box_list_link" href="https://validator.w3.org/">https://validator.w3.org</a>).</li>
+						<li>Добавьте классы элементам: блоку со всеми блюдами (section&gt;div) и блокам с
+							каждым блюдом (section&gt;div&gt;div).</li>
+						<li>К странице должен быть подключен шрифт из Google Fonts.</li>
+						<li>У страницы должно быть указано правильное значение viewpoint.</li>
+						<li>С главной страницы можно перейти на страницу «Собрать ланч» с помощью навигационного меню.</li>
+						<li>Со страницы «Собрать ланч» можно перейти на главную страницу с помощью навигационного меню.</li>
+						<li>Все CSS-свойства из задания должны быть использованы.</li>
+						<li>Используйте классы для стилизации элементов.</li>
+						<li>Цвет ссылок должен изменяться при наведении (используйте :hover).</li>
+						<li>Цвет активного пункта меню должен отличаться.</li>
+
+						<li>Результат должен соответствовать макетам (количество блоков, структура их наполнения).</li>
+					</ul>
+					<h4 class="task__full_box_h4">
+						Цвета
+					</h4>
+					<p class="task__full_box_another-text">
+						Для выделения активных ссылок в меню, ссылок и секций при наведении используется цвет tomato. Но вы можете
+						выбрать любой другой цвет.<br>
+						Не используйте больше 1 цвета для оформления страницы (кроме белого, черного, оттенков серого).
+					</p>
+					<h4 class="task__full_box_h4">
+						Контент-сайта
+					</h4>
+					<p class="task__full_box_text"><b>Текст (название компании, название блюд)</b>
+					</p>
+					<ul class="task__full_box_list">
+						<li>Вы можете использовать текст из макета или придумать свой. Но текст обязательно должен относиться к теме
+							сайта и быть осмысленным (нельзя использовать Lorem ipsum).</li>
+					</ul>
+
+					<p class="task__full_box_text"><b>Изображения</b></p>
+					<ul class="task__full_box_list">
+						<li>Изображения с блюдами можно скачать по <a href="https://mospolytech-web-course.netlify.app/images/2/menu.zip" download="" target="_blank">ссылке</a>.
+						</li>
+						<li>Все изображения сгенерированы с помощью
+							<a href="https://www.mage.space/build" target="_blank">Mage AI</a>. Вы можете сгенерировать собственные
+							изображения (режим «Fast text to image» доступен бесплатно)
+							или использовать другие изображения по собственному выбору.
+						</li>
+						<li>Используйте бесплатные изображения, например,
+							с сайта <a href="https://unsplash.com/" target="_blank">Unsplash</a>.</li>
+					</ul>
+
+					<h4 class="task__full_box_h4">
+						Размещение сайта
+					</h4>
+					<ul class="task__full_box_list">
+						<li>Сайт должен быть размещен на хостинге. Можно воспользоваться GitHub Pages, Netlify или хостингом
+							Политеха.</li>
+						<li>Код сайта должен быть добавлен в репозиторий GitHub.</li>
+					</ul>
+
+					<h4 class="task__full_box_h4">
+						Итоговый ответ
+					</h4>
+					<ul class="task__full_box_list">
+						<li>В качестве выполненного задания должны быть предоставлены две ссылки:
+							<ol>
+								<li>Ссылка на сайт, размещенный на хостинге;</li>
+								<li>Ссылка на репозиторий с кодом на GitHub.</li>
+							</ol>
+						</li>
+					</ul>
+				</div>
+
+				<div class="task__full_box task-additions">
+					<h3 class="task__full_box_title">
+						Материалы для изучения
+					</h3>
+
+					<div class="task__full_box_link-box">
+						<h4 class="task__full_box_link-box_title">HTML</h4>
+						<a href="https://doka.guide/html/section/" target="_blank" class="task__full_box_link-box_link">section
+							[Doka]</a>
+						<a href="https://doka.guide/html/button/" target="_blank" class="task__full_box_link-box_link">button
+							[Doka]</a>
+					</div>
+
+					<div class="task__full_box_link-box">
+						<h4 class="task__full_box_link-box_title">CSS</h4>
+						<a href="https://doka.guide/css/position/" target="_blank" class="task__full_box_link-box_link">Position
+							[Doka]</a>
+						<a href="https://doka.guide/css/numeric-types/" target="_blank" class="task__full_box_link-box_link">Единицы
+							измерения
+							[Doka]</a>
+						<a href="https://doka.guide/css/id-selector/" target="_blank" class="task__full_box_link-box_link">Селектор
+							по идентификатору
+							[Doka]</a>
+						<a href="https://www.geeksforgeeks.org/what-is-contextual-selector-in-css/" target="_blank" class="task__full_box_link-box_link">What is contextual selector in CSS?
+							[GeeksforGeeks]</a>
+						<a href="https://doka.guide/css/border-radius/" target="_blank" class="task__full_box_link-box_link">border-radius [Doka]</a>
+						<a href="https://doka.guide/css/cursor/" target="_blank" class="task__full_box_link-box_link">cursor
+							[Doka]</a>
+						<a href="https://doka.guide/css/text-align/" target="_blank" class="task__full_box_link-box_link">text-align
+							[Doka]</a>
+					</div>
+
+					<div class="task__full_box_link-box">
+						<h4 class="task__full_box_link-box_title">Grid | CSS</h4>
+						<a href="https://htmlacademy.ru/blog/css/display-grid" target="_blank" class="task__full_box_link-box_link">Как создать сетки на CSS Grid Layout [HTML Academy]</a>
+						<a href="https://doka.guide/css/grid-template-columns/" target="_blank" class="task__full_box_link-box_link">grid-template-columns
+							[Doka]</a>
+						<a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Grid_Layout" target="_blank" class="task__full_box_link-box_link">CSS Grid Layout
+							[MDN]</a>
+						<a href="https://grid.malven.co/" target="_blank" class="task__full_box_link-box_link">Шпаргалка по
+							гридам [grid.malven]</a>
+						<a href="https://doka.guide/css/grid-guide/" target="_blank" class="task__full_box_link-box_link">Гайд по
+							grid
+							[Doka]</a>
+					</div>
+
+					<div class="task__full_box_link-box">
+						<h4 class="task__full_box_link-box_title">Flex | CSS</h4>
+						<a href="https://htmlacademy.ru/blog/css/css-flex" target="_blank" class="task__full_box_link-box_link">Как
+							создать сетку на странице. CSS-свойство flex [HTML Academy]</a>
+						<a href="https://doka.guide/css/flex-wrap/" target="_blank" class="task__full_box_link-box_link">flex-wrap
+							[Doka]</a>
+						<a href="https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout/Flexbox" target="_blank" class="task__full_box_link-box_link">Flexbox [MDN]</a>
+						<a href="https://tpverstak.ru/flex-cheatsheet/" target="_blank" class="task__full_box_link-box_link">Интерактивная шпаргалка 1 [tpverstak]</a>
+						<a href="https://codepen.io/enxaneta/full/adLPwv" target="_blank" class="task__full_box_link-box_link">Интерактивная шпаргалка 2 [Codepen]</a>
+						<a href="https://flexbox.help/" target="_blank" class="task__full_box_link-box_link">Интерактивная шпаргалка
+							1 [flexbox.help]</a>
+						<a href="https://doka.guide/css/flexbox-guide/" target="_blank" class="task__full_box_link-box_link">Гайд по
+							flexbox [Doka]</a>
+						<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" class="task__full_box_link-box_link">Полный гайд по
+							flexbox [CSS-TRICKS]</a>
+						<a href="https://flexboxfroggy.com/#ru" target="_blank" class="task__full_box_link-box_link">Игра для
+							тренировки [flexboxfroggy]</a>
+					</div>
+
+					<div class="task__full_box_link-box">
+						<h4 class="task__full_box_link-box_title">Адаптивность | CSS</h4>
+						<a href="https://doka.guide/css/media/" target="_blank" class="task__full_box_link-box_link">@media
+							[Doka]</a>
+						<a href="https://htmlacademy.ru/blog/html/viewport" target="_blank" class="task__full_box_link-box_link">Зачем нужен метатег viewport
+							[HTML Academy]</a>
+						<a href="https://doka.guide/css/media/" target="_blank" class="task__full_box_link-box_link">meta
+							[Doka]</a>
+						<a href="https://www.w3schools.com/css/css_rwd_viewport.asp" target="_blank" class="task__full_box_link-box_link">Responsive Web Design -&nbsp;The Viewport
+							[W3Schools]</a>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</main>
+
+
+
+
+</body></html>

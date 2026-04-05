@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex">
+	<title>Лабораторная работа № 8 | Основы веб-технологий</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+	<link href="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%208%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/css2.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%208%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/task.css">
+</head>
+
+<body>
+
+	<header class="header">
+		<h1 class="header__title">Лабораторная работа 8</h1>
+		<hr>
+	</header>
+
+	<main class="task">
+		<p class="task__short">
+			Реализуйте сохранение выбранных пользователем блюд, чтобы  после обновления страницы 
+			выбор пользователя не сбрасывался. 
+			Добавьте страницу оформления заказа, где будет отображаться текущий состав заказа и 
+			форма ввода данных. 
+			Реализуйте возможность оформления заказа – отправку данных на сервер.
+		</p>
+
+		<div class="task__full">
+			<h2 class="task__full_title">
+				Порядок выполнения
+			</h2>
+
+			<p class="task__full_box_text">
+				1. Реализуйте сохранение данных о выбранных пользователем блюдах в 
+				localStorage, чтобы в последующем иметь вожможность получить эти данные 
+				на странице "Оформить заказ". В localStorage должны храниться только 
+				идентификаторы выбранных блюд.<br>
+				Формат хранения данных выбирается на усмотрение студента. 
+				
+			</p>
+
+			<p class="task__full_box_text">
+				2. Добавьте страницу "Оформить заказ". 
+				Внешний вид страницы представлен на макете ниже.<br>
+				Добавьте ссылку на эту страницу в навигационное меню.
+			</p>
+
+			<a href="https://mospolytech-web-course.netlify.app/images/8/mockup1.png" target="_blank">
+				<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%208%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup1.png" alt="" class="task__full_img">
+			</a>
+
+			<p class="task__full_box_text">
+				На странице "Оформить заказ" должно быть два раздела: "Состав заказа" и 
+				"Оформление заказа". 
+			</p>
+
+			<ul class="task__full_box_h4 h4-list">
+				<li>
+					В разделе "Состав заказа" должны быть отображены ранее
+				    добавленные пользоватем в заказ блюда (список выбранных блюд нужно загрузить из 
+					localStorage, а данные для отображения – загрузить с сервера).
+				</li>
+				<li>Формат отображения блюд такой же, как на странице "Собрать ланч".</li>
+				<li>
+					Вместо кнопки "Добавить" в карточке блюда должна быть кнопка "Удалить", по нажатию на которую соответствующее
+				    блюдо удаляется из заказа (т. е. информация о нём удаляется из localStorage) и 
+					карточка удаляется со страницы.
+				</li>
+				<li>
+					Если ни одно блюдо не выбрано, нужно отобразить пользователю текст 
+					"Ничего не выбрано. Чтобы добавить блюда в заказ, перейдите на страницу Собрать ланч.", 
+					где текст "Собрать ланч" – гиперссылка на соответствующую страницу.
+				</li>
+			</ul>
+
+			<ul class="task__full_box_h4 h4-list">
+				<li>
+					В разделе "Оформление заказа" должна отображаться форма оформления заказа, 
+					перенесённая со страницы "Собрать ланч".
+				</li>
+				<li>Выбранные пользователем блюда отображаются в левой части формы (см. макет выше), 
+					напртив каждого блюда отображается его стоимость.
+				</li>
+				<li>
+					При удалении блюда из заказа в соответствующем ему пункте должен отобразиться 
+					текст "Не выбран" (или "Не выбрано" для "Главного блюда") и должна быть 
+					пересчитана итоговая стоимость заказа.
+				</li>
+				<li>
+					Перед отправкой данных формы на сервер должна производиться проверка 
+					соответствия состава заказа одному из доступных комбо (см. задание к ЛР 6).
+				</li>
+			</ul>
+
+
+			<p class="task__full_box_text">
+				3. Внесите исправления в страницу "Собрать ланч": вместо формы оформления заказа разместите 
+				панель для перехода к оформлению заказа, в которой будет отображаться текущая стоимость 
+				добавленных в заказ блюд и ссылка "Перейти к оформлению", ведущая на страницу оформления 
+				заказа.
+			</p>
+
+			<ul class="task__full_box_h4 h4-list">
+				<li>
+					Панель для перехода к оформлению заказа должна быть скрыта, если пользователь 
+					не добавил в заказ ни одного блюда.
+				</li>
+				<li>
+					Ссылка "Перейти к оформлению" должна быть недоступна до тех пор, пока сосав заказа 
+					не удовлетворяет одному из доступных комбо (см. задание к ЛР 6).
+				</li>
+				<li>Для размещения элемента на странице используйте position: sticky.</li>
+				<li>При добавлении очередного блюда в заказ, стоимость должна пересчитываться.</li>
+				<li>При открытии страницы "Собрать ланч" должны учитываться данные текущего заказа, 
+					хранящиеся в localStorage (т. е. в меню должны быть выделены выбранные блюда, рассчитана 
+					и отображена текущая суммарная стоимость выбранных блюд и т. д.).
+				</li>
+			</ul>
+
+			<p class="task__full_box_text">
+				Пример работы панели для перехода к оформлению заказа представлен на видео:
+			</p>
+
+			<video controls="controls" src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%208%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/go-to-order-panel-video.mp4" class="task__full_video"></video>
+
+			<p class="task__full_box_text">
+				4. Реализуйте отправку данных заказа на сервер по нажатию на кнопку "Отправить".
+			</p>
+
+			<ul class="task__full_box_h4 h4-list">
+				<li>
+					Запрос должен быть отправлен при помощи fetch.
+				</li>
+				<li>
+					В случае возникновения ошибки при отправке запроса или его обработке на стороне 
+					сервера пользователю должно быть отображено уведомление об ошибке (можно использовать 
+					функцию alert или написать кастомное модальное окно – на ваше усмотрение).
+				</li>
+				<li>
+					После успешного оформления заказа данные о выбранных блюдах из 
+					localStorage должны удаляться. Если не удалось оформить заказ – 
+					данные не удаляются.
+				</li>
+			</ul>
+
+			<h2 class="task__full_title">API URL</h2>
+
+			<ul class="task__full_box_h4 h4-list">
+				<li>Для тех, кто использует хостинг Московского Политеха: http://lab8-api.std-900.ist.mospolytech.ru</li>
+				<li>Для тех, кто использует Netlify или GitHub Pages: https://edu.std-900.ist.mospolytech.ru</li>
+			</ul>
+
+			<h2 class="task__full_title">Инструкция по работе с API</h2>
+			
+			<p class="task__full_box_text">
+				Для получения доступа к API необходимо пройти процедуру авторизации. Для авторизации
+				нужно указать в качестве параметра запроса api_key значение уникального ключа, который
+				выдаётся каждому пользователю. Ключ представляет собой идентификатор UUIDv4, который
+				является случайным 16-байтным номером (например,
+				123e4567-e89b-12d3-a456-426655440000).
+			</p>
+			<p class="task__full_box_text">
+				<strong>
+					Для получения ключа необходимо перейти по ссылке, которая выложена
+					в СДО Московского Политеха
+				</strong>
+			</p>
+			
+			<p class="task__full_box_text">
+				<strong>
+					Обратите внимание, что параметр api_key всегда передаётся в строке запроса.
+				</strong>
+			</p>
+			
+			<p class="task__full_box_text">
+				Пользователь может просматривать, редактировать и удалять только свои заказы. В один
+				момент времени в базе данных может быть не более 10 заказов, созданных одним и тем же
+				пользователем.
+			</p>
+			
+			<p class="task__full_box_text">
+				Если пользователь попробует совершить действие, не пройдя авторизацию, в качестве ответа
+				на его запрос придёт сообщение:
+			</p><pre>{"error": "Для получения доступа к API необходимо пройти процедуру авторизации. Для этого нужно передать в запросе персональный API Key."}
+			</pre>
+			<p></p>
+			
+			<p class="task__full_box_text">
+				При передаче параметров в POST- и PUT-запросах данные должны передаваться в теле
+				запроса в формате application/json (нужно вручную сериализовать данные
+				и установить значение заголовка Content-Type) или multipart/form-data
+				(достаточно при отправке данных формы воспользоваться объектом FormData).
+			</p>
+			
+			<p class="task__full_box_text">
+				При оформлении заказа в запросе к серверу должны быть указаны значения обязательных полей:
+			</p>
+			
+			<div class="table__wrapper">
+				<table class="task__full_box_table">
+					<thead>
+						<tr>
+							<th>Название</th>
+							<th>Тип</th>
+							<th>Обязательное</th>
+							<th>Только для чтения</th>
+							<th>Примечание</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>id</td>
+							<td>Integer</td>
+							<td></td>
+							<td>Да</td>
+							<td>Устанавливается сервером.</td>
+						</tr>
+						<tr>
+							<td>full_name</td>
+							<td>String</td>
+							<td>Да</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>email</td>
+							<td>String</td>
+							<td>Да</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>subscribe</td>
+							<td>Boolean</td>
+							<td>Нет</td>
+							<td></td>
+							<td>Допустимы значения 0 и 1.</td>
+						</tr>
+						<tr>
+							<td>phone</td>
+							<td>String</td>
+							<td>Да</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>delivery_address</td>
+							<td>String</td>
+							<td>Да</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>delivery_type</td>
+							<td>String</td>
+							<td>Да</td>
+							<td></td>
+							<td>Допустимы значения "now" и "by_time".</td>
+						</tr>
+						<tr>
+							<td>delivery_time</td>
+							<td>Time</td>
+							<td>Нет</td>
+							<td></td>
+							<td>
+								Значение передаётся в формате HH:MM.<br>
+								Доступное время доставки: с 7:00 до 23:00 с шагом 5 минут.<br>
+								Не должно быть пустым, если delivery_type=by_time.<br>
+								Не должно быть раньше текущего времени.
+							</td>
+						</tr>
+						<tr>
+							<td>comment</td>
+							<td>String</td>
+							<td>Нет</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>soup_id</td>
+							<td>Integer</td>
+							<td>Нет</td>
+							<td></td>
+							<td>Обязательность поля зависит от состава комбо.</td>
+						</tr>
+						<tr>
+							<td>main_course_id</td>
+							<td>Integer</td>
+							<td>Нет</td>
+							<td></td>
+							<td>Обязательность поля зависит от состава комбо.</td>
+						</tr>
+						<tr>
+							<td>salad_id</td>
+							<td>Integer</td>
+							<td>Нет</td>
+							<td></td>
+							<td>Обязательность поля зависит от состава комбо.</td>
+						</tr>
+						<tr>
+							<td>drink_id</td>
+							<td>Integer</td>
+							<td>Да</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>dessert_id</td>
+							<td>Integer</td>
+							<td>Нет</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>created_at</td>
+							<td>DateTime</td>
+							<td></td>
+							<td>Да</td>
+							<td>Устанавливается сервером.</td>
+						</tr>
+						<tr>
+							<td>updated_at</td>
+							<td>DateTime</td>
+							<td></td>
+							<td>Да</td>
+							<td>Устанавливается сервером.</td>
+						</tr>
+						<tr>
+							<td>student_id</td>
+							<td>Integer</td>
+							<td></td>
+							<td>Да</td>
+							<td>Устанавливается сервером.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<p class="task__full_box_text">
+				Доступные пользователю действия представлены в таблице:
+			</p>
+			
+			<div class="table__wrapper">
+				<table class="task__full_box_table">
+					<thead>
+						<tr>
+							<th>Действие</th>
+							<th>Метод и путь</th>
+							<th>Формат ответа</th>
+							<th>Примечание</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Получить данные всех блюд</td>
+							<td>GET /labs/api/dishes</td>
+							<td>JSON [{item1},{item2},...{itemN}]</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Получить данные конкретного блюда</td>
+							<td>GET /labs/api/dishes/{int:dish_id}</td>
+							<td>JSON {Item}</td>
+							<td>Вместо {int:dish_id} нужно подставить целое число – идентификатор блюда. </td>
+						</tr>
+						<tr>
+							<td>Получить данные всех заказов</td>
+							<td>GET /labs/api/orders</td>
+							<td>JSON [{item1},{item2},...{itemN}]</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Получить данные конкретного заказа</td>
+							<td>GET /labs/api/orders/{int:order_id}</td>
+							<td>JSON {Item}</td>
+							<td>Вместо {int:order_id} нужно подставить целое число – идентификатор заказа.</td>
+						</tr>
+						<tr>
+							<td>Создать новый заказ</td>
+							<td>POST /labs/api/orders</td>
+							<td>JSON {newItem}</td>
+							<td>Нужно передать значения всех обязательных полей.</td>
+						</tr>
+						<tr>
+							<td>Изменить заказ</td>
+							<td>PUT /labs/api/orders/{int:order_id}</td>
+							<td>JSON {updateItem}</td>
+							<td>
+								Вместо {int:order_id} нужно подставить целое число – идентификатор заказа.<br>
+								Достаточно передать только значения изменившихся полей.
+							</td>
+						</tr>
+						<tr>
+							<td>Удалить заказ</td>
+							<td>DELETE /labs/api/orders/{int:order_id}</td>
+							<td>JSON {Item}</td>
+							<td>Вместо {int:order_id} нужно подставить целое число – идентификатор заказа.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+
+			<div class="task__full_box task-requirements">
+				<h3 class="task__full_box_title">
+					Защита
+				</h3>
+
+				<p class="task__full_box_text">
+					Чтобы сдать лабораторную, необходимо выполнить все <a href="https://mospolytech-web-course.netlify.app/requirements" target="_blank">требования</a>.
+				</p>
+
+			</div>
+
+			<div class="task__full_box task-additions">
+				<h3 class="task__full_box_title">
+					Материалы для изучения
+				</h3>
+
+				<div class="task__full_box_link-box">
+
+					<a href="https://doka.guide/js/local-storage/" target="_blank">localStorage [Doka]</a>
+					<a href="https://developer.mozilla.org/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data" target="_blank">Получение данных с сервера [MDN]</a>
+					<a href="https://developer.mozilla.org/ru/docs/Learn/JavaScript/Objects/JSON" target="_blank">Работа с JSON
+						[MDN]</a>
+					<a href="https://learn.javascript.ru/async" target="_blank">Промисы, async/await [Learn JS]</a>
+					<a href="https://doka.guide/js/async-await/" target="_blank">async/await
+						[Doka]</a>
+						<a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Using_promises" target="_blank">Использование промисов
+						[MDN]</a>
+					<a href="https://learn.javascript.ru/fetch" target="_blank">Fetch [Learn JS]</a>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank">Fetch API [MDN]</a>
+					<a href="https://doka.guide/js/fetch/" target="_blank">fetch() [Doka]</a>
+					<a href="https://developer.mozilla.org/ru/docs/Web/HTTP/CORS" target="_blank">Cross-Origin Resource Sharing
+						(CORS) [MDN]</a>
+				</div>
+
+			</div>
+
+		</div>
+
+
+	</main>
+
+
+
+</body></html>

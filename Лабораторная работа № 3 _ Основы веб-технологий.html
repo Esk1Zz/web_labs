@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex">
+	<title>Лабораторная работа № 3 | Основы веб-технологий</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+	<link href="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%203%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/css2.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%203%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/task.css">
+</head>
+
+<body>
+
+	<header class="header">
+		<h1 class="header__title">Лабораторная работа 3</h1>
+		<hr>
+	</header>
+
+	<main class="task">
+		<p class="task__short">
+			Создайте форму заказа. Форма должна отправляться на <a href="#!">https://httpbin.org/post</a>, 
+			где должны отобразиться все отправленные значения.
+		</p>
+
+		<div class="task__full">
+			<h2 class="task__full_title">
+				Порядок выполнения
+			</h2>
+			<p class="task__full_text" id="mockup_form">
+				Форма должна располагаться на странице «Собрать ланч» после блока main (блока с информацией обо всех доступных
+				для заказа блюдах).
+				Примерный макет формы:
+			</p>
+			<a href="https://mospolytech-web-course.netlify.app/images/3/mockup_form.png" target="_blank">
+				<img src="%D0%9B%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%E2%84%96%203%20_%20%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D1%8B%20%D0%B2%D0%B5%D0%B1-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9_files/mockup_form.png" alt="" class="task__full_img">
+			</a>
+
+			<p class="task__full_text">
+				<a href="https://mospolytech-web-course.netlify.app/images/3/mockup_full.png" target="_blank">Полный макет</a> страницы.
+			</p>
+
+			<div class="task__full_box task-html">
+				<h3 class="task__full_box_title">
+					HTML
+				</h3>
+				<p class="task__full_box_text">
+					<b>Обязательные элементы</b>, которые должны быть на странице:
+				</p>
+
+				<ul class="task__full_box_h4 h4-list">
+					<li>Блок, состоящий из заголовка блока и формы</li>
+					<ul class="task__full_box_list">
+						<li>Форма должна делиться на два блока:</li>
+						<ul>
+							<li>Блок с заказом клиента:</li>
+							<ul>
+								<li>заголовок блока</li>
+								<li>label для каждого селекта</li>
+								<li>селект для каждого блюда (суп, главное блюдо, напиток)</li>
+								<li>label и многострочное текстовое поле для комментария</li>
+							</ul>
+							<li>Блок с данными клиента:</li>
+							<ul>
+								<li>заголовок блока</li>
+								<li>label и поле для ввода имени </li>
+								<li>label и поле для ввода email</li>
+								<li>чекбокс и label для выражения согласия на получение информации (подписка на рассылку)</li>
+								<li>label и поле для ввода телефона </li>
+								<li>label и поле для ввода адреса </li>
+								<li>переключатели для выбора времени доставки (radio + label) и подпись к переключателям (fieldset + legend)</li>
+								<li>label и поле для указания времени доставки</li>
+								<li>кнопка сбросить</li>
+								<li>кнопка отправить</li>
+							</ul>
+						</ul>
+					</ul>
+				</ul>
+
+				<p class="task__full_box_text">
+					Подробные требования к элементам блока с данными клиента:
+				</p>
+
+				<table class="task__full_box_table table_type_one">
+					<tbody><tr>
+						<th>Элемент</th>
+						<th>Тип</th>
+						<th>Особенности</th>
+					</tr>
+					<tr>
+						<td>Комментарий (textarea)</td>
+						<td>-</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>Имя (input)</td>
+						<td>text</td>
+						<td>обязательное для заполнения</td>
+					</tr>
+					<tr>
+						<td>Email (input)</td>
+						<td>email</td>
+						<td>обязательное для заполнения</td>
+					</tr>
+					<tr>
+						<td>Чекбокс для подписки на рассылку (input)</td>
+						<td>checkbox</td>
+						<td>По умолчанию выбран (стоит галочка)</td>
+					</tr>
+					<tr>
+						<td>Телефон (input)</td>
+						<td>tel</td>
+						<td>обязательное для заполнения</td>
+					</tr>
+					<tr>
+						<td>Адрес (input)</td>
+						<td>text</td>
+						<td>обязательное для заполнения</td>
+					</tr>
+					<tr>
+						<td>Выбор времени доставки (input)</td>
+						<td>radio</td>
+						<td>обязательное для заполнения</td>
+					</tr>
+					<tr>
+						<td>Указание времени доставки (input)</td>
+						<td>time</td>
+						<td>минимальное время - 07:00<br>
+							максимальное время - 23:00<br>
+							шаг изменения времени - 5 минут</td>
+					</tr>
+					<tr>
+						<td>Кнопка сбросить (button)</td>
+						<td>reset</td>
+						<td>Кнопка должна полностью очищать форму</td>
+					</tr>
+					<tr>
+						<td>Кнопка отправить (button)</td>
+						<td>submit</td>
+						<td>Кнопка должна отравлять форму</td>
+					</tr>
+				</tbody></table>
+
+				<p class="task__full_box_info">
+					Форма должна отправляться методом POST на https://httpbin.org/post<br>
+					На данной странице httpbin.org должны отобразиться все отправленные данные.
+					<br><br>
+					<b>Блок с заказом клиента</b><br><br>
+					У каждого селекта должна быть указана опция по умолчанию с пустым значением value (например, «Выберите
+					суп»).<br>
+					У всех остальных опций селектов должно быть указано значение value. Подберите логичное значение 
+					на английском языке, чтобы при
+					отправке данных его можно было верно понять. Например, для супа Гаспачо value может быть «gaspacho».<br><br>
+					Все селекты обязательны для заполнения (форма не должна отправиться, пока в каждом селекте не будет выбрана
+					опция с заполненным value).<br><br>
+					Все label должны быть связаны с select, к которым они относятся.<br><br>
+					<b>Блок с данными клиента</b><br><br>
+					Форма не должна отправляться, если хотя бы одно из обязательных полей не заполнено.<br><br>
+					Все label должны быть связаны с input/textarea, к которым они относятся.
+				</p>
+
+				<div class="task__full_box task-css">
+					<h3 class="task__full_box_title">
+						CSS
+					</h3>
+					<p class="task__full_box_text">
+						Необходимо как можно точнее повторить <a href="#mockup_form">макет</a> формы:
+					</p>
+					<ul class="task__full_box_list">
+						<li>разделение на колонки</li>
+						<li>размер шрифта для разных элементов</li>
+						<li>ширина и высота полей ввода, селектов</li>
+						<li>стилизация кнопок</li>
+					</ul>
+
+					<p class="task__full_box_info">
+						Вы можете использовать дополнительные HTML-элементы и CSS-свойства на своё усмотрение.
+					</p>
+				</div>
+
+				<div class="task__full_box task-requirements">
+					<h3 class="task__full_box_title">
+						Требования
+					</h3>
+					<ul class="task__full_box_list">
+						<li>Все требования из блока HTML должны быть выполнены.</li>
+						<li>Все требования из блока CSS должны быть выполнены.</li>
+						<li>Код должен быть валиден (не должно быть ошибок в валидаторе <a target="_blank" class="task__full_box_list_link" href="https://validator.w3.org/">https://validator.w3.org</a>).</li>
+						<li>Результат должен соответствовать макетам (количество блоков, структура их наполнения).</li>
+					</ul>
+
+					<h4 class="task__full_box_h4">
+						Размещение сайта
+					</h4>
+					<ul class="task__full_box_list">
+						<li>Сайт должен быть размещен на хостинге. Можно воспользоваться GitHub Pages, Netlify или хостингом
+							Политеха.</li>
+						<li>Код сайта должен быть добавлен в репозиторий GitHub.</li>
+					</ul>
+
+					<h4 class="task__full_box_h4">
+						Итоговый ответ
+					</h4>
+					<ul class="task__full_box_list">
+						<li>В качестве выполненного задания должны быть предоставлены две ссылки:
+							<ol>
+								<li>Ссылка на сайт, размещенный в
+									Интернете</li>
+								<li>Ссылка на
+									репозиторий с кодом на GitHub</li>
+							</ol>
+						</li>
+					</ul>
+				</div>
+
+				<div class="task__full_box task-additions">
+					<h3 class="task__full_box_title">
+						Материалы для изучения
+					</h3>
+
+					<div class="task__full_box_link-box">
+						<h4 class="task__full_box_link-box_title">HTML</h4>
+						<a href="https://doka.guide/html/form/" target="_blank" class="task__full_box_link-box_link">Формы
+							[Doka]</a>
+						<a href="https://doka.guide/html/input/" target="_blank" class="task__full_box_link-box_link">input
+							[Doka]</a>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox" target="_blank" class="task__full_box_link-box_link">input type="checkbox"
+							[MDN]</a>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio" target="_blank" class="task__full_box_link-box_link">input type="radio"
+							[MDN]</a>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/time" target="_blank" class="task__full_box_link-box_link">input type="time"
+							[MDN]</a>
+						<a href="https://doka.guide/html/select/" target="_blank" class="task__full_box_link-box_link">select
+							[Doka]</a>
+						<a href="https://doka.guide/html/option/" target="_blank" class="task__full_box_link-box_link">option
+							[Doka]</a>
+						<a href="https://doka.guide/html/label/" target="_blank" class="task__full_box_link-box_link">label
+							[Doka]</a>
+						<a href="hhttps://doka.guide/html/for/" target="_blank" class="task__full_box_link-box_link">Атрибут&nbsp;for
+							[Doka]</a>
+						<a href="https://doka.guide/html/textarea/" target="_blank" class="task__full_box_link-box_link">textarea
+							[Doka]</a>
+						<a href="https://doka.guide/html/button/" target="_blank" class="task__full_box_link-box_link">button
+							[Doka]</a>
+						<a href="https://doka.guide/html/placeholder/" target="_blank" class="task__full_box_link-box_link">Атрибут&nbsp;placeholder
+							[Doka]</a>
+						<a href="https://doka.guide/html/required/" target="_blank" class="task__full_box_link-box_link">Атрибут&nbsp;required
+							[Doka]</a>
+					</div>
+
+					<div class="task__full_box_link-box">
+						<h4 class="task__full_box_link-box_title">CSS</h4>
+						<a href="https://www.w3schools.com/css/css_form.asp" target="_blank" class="task__full_box_link-box_link">Стилизация форм
+							[W3Schools]</a>
+					</div>
+
+					<div class="task__full_box_link-box">
+						<h4 class="task__full_box_link-box_title">Сеть</h4>
+						<a href="https://httpbin.org/" target="_blank" class="task__full_box_link-box_link">httpbin.org</a>
+						<a href="https://developer.mozilla.org/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL" target="_blank" class="task__full_box_link-box_link">Что такое URL-адрес?
+							[MDN]</a>
+						<a href="https://doka.guide/tools/url/" target="_blank" class="task__full_box_link-box_link">URL
+							[Doka]</a>
+						<a href="https://developer.mozilla.org/ru/docs/Web/HTTP/Overview" target="_blank" class="task__full_box_link-box_link">Обзор протокола HTTP [MDN]</a>
+						<a href="https://doka.guide/tools/http-protocol/" target="_blank" class="task__full_box_link-box_link">Протокол HTTP
+							[Doka]</a>
+						<a href="https://doka.guide/tools/network/" target="_blank" class="task__full_box_link-box_link">Работа с
+							сетью
+							[Doka]</a>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</main>
+
+
+
+</body></html>
